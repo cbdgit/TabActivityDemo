@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TabActivityTest</string>
+    <string name="transferinfo">抱歉，此功能正在开发中，敬请期待...</string>
+    <string name="route">线路</string>
+    <string name="station">站点</string>
+    <string name="transfer">换乘</string>
+</resources>
