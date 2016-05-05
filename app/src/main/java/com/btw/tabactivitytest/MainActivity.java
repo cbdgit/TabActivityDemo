@@ -16,27 +16,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends FragmentActivity {
-    /**
-     * 顶部三个LinearLayout
-     */
+
+    //顶部三个LinearLayout
     private LinearLayout mTabRoute;
     private LinearLayout mTabStation;
     private LinearLayout mTabTransfer;
 
-    /**
-     * 顶部的三个TextView
-     */
+    //顶部的三个TextView
     private TextView route;
     private TextView station;
     private TextView transfer;
 
-    /**
-     * Tab的那个引导线
-     */
+    //Tab的那个引导线
     private ImageView mTabLine;
-    /**
-     * 屏幕的宽度
-     */
+    //屏幕的宽度
     private int screenWidth;
 
     private ViewPager mViewPager;
@@ -55,13 +48,11 @@ public class MainActivity extends FragmentActivity {
 
         mViewPager = (ViewPager) findViewById(R.id.id_viewpager);
 
-        /**
-         * 初始化Adapter
-         */
+        //初始化Adapter
         mAdapter = new FragmentAdapter(getSupportFragmentManager(), fragments);
 
         mViewPager.setAdapter(mAdapter);
-        mViewPager.setOnPageChangeListener((ViewPager.OnPageChangeListener) new TabOnPageChangeListener());
+        mViewPager.setOnPageChangeListener(new TabOnPageChangeListener());
 
         initTabLine();
     }
