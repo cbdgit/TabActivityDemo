@@ -9,9 +9,9 @@ import android.view.ViewGroup;
 /**
  * Created by Won on 2016/5/4.
  */
-public class StationMainTab02 extends Fragment {
+public class MainTab02 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.station_tab_02, container, false);
+        View view = inflater.inflate(R.layout.tab_02, container, false);
         return view;
     }
 }

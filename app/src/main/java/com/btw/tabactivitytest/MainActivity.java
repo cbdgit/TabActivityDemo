@@ -18,14 +18,14 @@ import java.util.List;
 public class MainActivity extends FragmentActivity {
 
     //顶部三个LinearLayout
-    private LinearLayout mTabRoute;
-    private LinearLayout mTabStation;
-    private LinearLayout mTabTransfer;
+    private LinearLayout mTab01;
+    private LinearLayout mTab02;
+    private LinearLayout mTab03;
 
     //顶部的三个TextView
-    private TextView route;
-    private TextView station;
-    private TextView transfer;
+    private TextView id_tab01_info;
+    private TextView id_tab02_info;
+    private TextView id_tab03_info;
 
     //Tab的那个引导线
     private ImageView mTabLine;
@@ -78,30 +78,31 @@ public class MainActivity extends FragmentActivity {
      * 初始化控件，初始化Fragment
      */
     private void initView() {
-        route = (TextView) findViewById(R.id.id_route);
-        station = (TextView) findViewById(R.id.id_station);
-        transfer = (TextView) findViewById(R.id.id_transfer);
+        id_tab01_info = (TextView) findViewById(R.id.id_tab01_info);
+        id_tab02_info = (TextView) findViewById(R.id.id_tab02_info);
+        id_tab03_info = (TextView) findViewById(R.id.id_tab03_info);
 
-        route.setOnClickListener(new TabOnClickListener(0));
-        station.setOnClickListener(new TabOnClickListener(1));
-        transfer.setOnClickListener(new TabOnClickListener(2));
+        mTab01 = (LinearLayout) findViewById(R.id.id_tab01);
+        mTab02 = (LinearLayout) findViewById(R.id.id_tab02);
+        mTab03 = (LinearLayout) findViewById(R.id.id_tab03);
 
-        fragments.add(new RouteMainTab01());
-        fragments.add(new StationMainTab02());
-        fragments.add(new TransferMainTab03());
+        mTab01.setOnClickListener(new TabOnClickListener(0));
+        mTab02.setOnClickListener(new TabOnClickListener(1));
+        mTab03.setOnClickListener(new TabOnClickListener(2));
 
-        mTabRoute = (LinearLayout) findViewById(R.id.id_tab1_route);
-        mTabStation = (LinearLayout) findViewById(R.id.id_tab2_station);
-        mTabTransfer = (LinearLayout) findViewById(R.id.id_tab3_transfer);
+        fragments.add(new MainTab01());
+        fragments.add(new MainTab02());
+        fragments.add(new MainTab03());
+
     }
 
     /**
      * 重置颜色
      */
     private void resetTextView() {
-        route.setTextColor(res.getColor(R.color.black));
-        station.setTextColor(res.getColor(R.color.black));
-        transfer.setTextColor(res.getColor(R.color.black));
+        id_tab01_info.setTextColor(res.getColor(R.color.black));
+        id_tab02_info.setTextColor(res.getColor(R.color.black));
+        id_tab03_info.setTextColor(res.getColor(R.color.black));
     }
 
     /**
@@ -144,13 +145,13 @@ public class MainActivity extends FragmentActivity {
             resetTextView();
             switch (position) {
                 case 0:
-                    route.setTextColor(res.getColor(R.color.green));
+                    id_tab01_info.setTextColor(res.getColor(R.color.colorAccent));
                     break;
                 case 1:
-                    station.setTextColor(res.getColor(R.color.green));
+                    id_tab02_info.setTextColor(res.getColor(R.color.colorAccent));
                     break;
                 case 2:
-                    transfer.setTextColor(res.getColor(R.color.green));
+                    id_tab03_info.setTextColor(res.getColor(R.color.colorAccent));
                     break;
             }
         }

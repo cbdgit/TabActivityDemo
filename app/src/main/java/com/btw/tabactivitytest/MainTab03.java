@@ -9,9 +9,9 @@ import android.view.ViewGroup;
 /**
  * Created by Won on 2016/5/4.
  */
-public class RouteMainTab01 extends Fragment {
+public class MainTab03 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.route_tab_01, container, false);
+        View view = inflater.inflate(R.layout.tab_03, container, false);
         return view;
     }
 }
