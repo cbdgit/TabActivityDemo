@@ -52,7 +52,7 @@ public class MainActivity extends FragmentActivity {
         mAdapter = new FragmentAdapter(getSupportFragmentManager(), fragments);
 
         mViewPager.setAdapter(mAdapter);
-        mViewPager.setOnPageChangeListener(new TabOnPageChangeListener());
+        mViewPager.addOnPageChangeListener(new TabOnPageChangeListener());
 
         initTabLine();
     }
