@@ -10,4 +10,4 @@ ViewPager+fragment的一个demo,顶部有导航栏(实现懒加载)
 ，若想要刷新数据，再调用相应的加载数据方法就好了）
 
 ## 预览图
-<img src="https://github.com/wenwenwen888/TabActivityDemo/blob/master/preview/1.gif" width="30%" height="30%"></br>
+<img src="https://github.com/wenwenwen888/TabActivityDemo/blob/master/preview/preview.gif" width="30%" height="30%"></br>
